@@ -1,0 +1,53 @@
+.about {
+	@include outer-container;
+
+	.text {
+		width: 80vw;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.halfWidth {
+		@include span-columns(6);
+		min-height: calc(100vh - 4*#{$border});
+		display: table;
+
+		@include media($tablet-l) {
+	    @include span-columns(12);
+	  }
+
+		&.left {
+			padding: $border;
+
+			@include media($tablet-l) {
+		    min-height: 100px;
+				margin-bottom: $border;
+		  }
+		}
+
+		&.left {
+			background: $c-black;
+		}
+
+		p {
+			display: table-cell;
+	    text-align: justify;
+	    vertical-align: middle;
+	    display: table-cell;
+		}
+	}
+
+	.halfHeight {
+		display: table;
+    width: 100%;
+		min-height: calc(50vh - 3*(#{$border} - 5px));
+		padding: $border;
+		margin-bottom: $border;
+		background: $c-black;
+
+		&.left {
+			background: $c-black;
+		}
+	}
+
+}

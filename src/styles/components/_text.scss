@@ -1,0 +1,20 @@
+.text-container {
+  @include span-columns(12);
+  display: table;
+  flex-direction: column;
+  position: relative;
+
+  min-height: 200px;
+  margin-bottom: 30px;
+  padding: $border;
+  background: $c-black;
+  color: $c-white;
+  text-decoration: none;
+
+  h2 {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 4rem;
+    text-align: center;
+  }
+}

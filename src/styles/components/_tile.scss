@@ -1,0 +1,44 @@
+.tile {
+  @include span-columns(4);
+  @include omega(3n);
+  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  min-height: 200px;
+  margin-bottom: 30px;
+  padding: $border;
+  background: $c-black;
+  color: $c-white;
+  text-decoration: none;
+
+  @include media($tablet-l) {
+    @include omega-reset(3n);
+    @include span-columns(6);
+    @include omega(2n);
+  }
+
+  @include media($mobile) {
+    @include omega-reset(2n);
+    @include span-columns(12);
+    @include omega(1n);
+  }
+
+  &:hover {
+    background: lighten($c-black, 5%);
+  }
+
+  p {
+    &:first-of-type {
+      margin-bottom: 70px;
+    }
+  }
+
+  .date {
+    margin-top: 40px;
+    position: absolute;
+    bottom: 20px;
+    display: block;
+  }
+}

@@ -1,0 +1,86 @@
+
+
+* {
+	font-family: 'Roboto', sans-serif;
+	font-size: 62.5%;
+}
+
+.splash {
+	.text {
+		font-size: 10rem;
+		text-align: center;
+		color: $c-black-rgba;
+
+		@include media($mobile) {
+			font-size: 4rem;
+		}
+
+		span {
+			display: block;
+			font-size: 3rem;
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 1rem;
+}
+
+h2 {
+	font-size: 4rem;
+	font-weight: 100;
+}
+
+p,
+a {
+	font-size: 2.1rem;
+	text-transform: lowercase;
+	color: $c-white;
+
+	.about & {
+		font-size: 3rem;
+		font-weight: 100;
+		line-height: 60px;
+
+		@include media($mobile) {
+			font-size: 2rem;
+			line-height: 38px;
+		}
+	}
+}
+
+a {
+	&.vertical {
+		color: $c-white;
+		font-size: 3.5rem;
+		text-align: center;
+		text-decoration: none;
+	}
+}
+
+.header {
+	p {
+		font-size: 4rem;
+		font-weight: 100;
+		letter-spacing: 4px;
+	}
+}
+
+.postTile {
+	p {
+		font-weight: 100;
+		letter-spacing: 4px;
+	}
+}
+
+.fullPage {
+	&.about {
+		color: $c-white;
+		font-size: 2rem;
+	}
+}

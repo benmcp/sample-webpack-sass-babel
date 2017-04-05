@@ -1,0 +1,8 @@
+$tablet-l: new-breakpoint(max-width 1024px);
+$tablet-p: new-breakpoint(max-width 768px);
+$mobile: new-breakpoint(max-width 667px);
+
+$border: 30px;
+$mobileBorder: 10px;
+$transition-fast: .2s;
+$transition: .5s;

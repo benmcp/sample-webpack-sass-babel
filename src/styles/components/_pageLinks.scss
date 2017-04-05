@@ -1,0 +1,27 @@
+a {
+  &.vertical {
+    position: fixed;
+    width: 160px;
+    padding: 7px 10px 13px;
+    top: 50%;
+    z-index: 1;
+
+    background: $c-black;
+    line-height: 40px;
+
+    &:hover {
+      background: $c-true-white;
+      color: $c-black;
+    }
+
+    &.right {
+      right: -50px;
+      transform: rotate(-90deg);
+    }
+
+    &.left {
+      left: -50px;
+      transform: rotate(90deg);
+    }
+  }
+}

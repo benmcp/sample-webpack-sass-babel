@@ -1,0 +1,37 @@
+.app-enter {
+  transition: all $transition ease-in;
+  position: absolute;
+  opacity: 0.05;
+
+  &.right {
+    left: 100%;
+  }
+
+  &.left {
+    left: -100%;
+  }
+
+  &.app-enter-active {
+    opacity: 1;
+    left: 0%;
+  }
+}
+
+.app-leave {
+  transition: all $transition ease-in;
+  opacity: 1;
+  position: absolute;
+  left: 0%;
+
+  &.app-leave-active {
+    opacity: 0.01;
+
+    &.right {
+      left: 100%;
+    }
+
+    &.left {
+      left: -100%;
+    }
+  }
+}

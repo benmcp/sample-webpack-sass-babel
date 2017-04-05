@@ -1,0 +1,53 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+html {
+	display: block;
+	position: relative;
+}
+
+body {
+
+	border-left: $border solid $c-black;
+	border-right: $border solid $c-black;
+	background-color: $c-white;
+	min-height: 100vh;
+	overflow-x: hidden;
+
+	@include media($mobile) {
+		border-left: $mobileBorder solid $c-black;
+		border-right: $mobileBorder solid $c-black;
+	}
+
+	&:before,
+	&:after {
+		position: fixed;
+		height: $border;
+		background: $c-black;
+
+		content: "";
+		left: 0;
+		right: 0;
+
+		@include media($mobile) {
+			height: $mobileBorder;
+		}
+	}
+
+	&:before {
+		top: 0;
+	}
+
+	&:after {
+		bottom: 0;
+	}
+}
+
+.link-active {
+  color: #bbbbbb;
+  text-decoration: none;
+}

@@ -1,0 +1,15 @@
+.fullPage {
+	display: table;
+	width: 100%;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: $border;
+
+	@include media($mobile) {
+		padding: $mobileBorder;
+	}
+
+	&.about {
+		padding: 60px $border $border;
+	}
+}
